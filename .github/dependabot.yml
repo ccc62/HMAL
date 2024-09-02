@@ -2,18 +2,18 @@ version: 2
 updates:
   # 配置 Gradle 插件更新
   - package-ecosystem: "gradle"
-    directory: "/"
+    directory: "/"  # 项目的根目录
     schedule:
-      interval: "weekly"
+      interval: "weekly"  # 每周检查一次
     commit-message:
-      prefix: "deps"
-    open-pull-requests-limit: 10
+      prefix: "deps"  # 提交消息前缀
+    open-pull-requests-limit: 10  # 最多打开 10 个 PR
 
   # 配置 GitHub Actions 的依赖项更新
   - package-ecosystem: "github-actions"
-    directory: "/"
+    directory: "/"  # 项目的根目录
     schedule:
-      interval: "daily"
+      interval: "daily"  # 每天检查一次
     commit-message:
-      prefix: "ci"
-    open-pull-requests-limit: 5
+      prefix: "ci"  # 提交消息前缀
+    open-pull-requests-limit: 5  # 最多打开 5 个 PR
