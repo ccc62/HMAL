@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # 配置 Gradle 插件更新
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
+    open-pull-requests-limit: 10
+
+  # 配置 GitHub Actions 的依赖项更新
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "ci"
+    open-pull-requests-limit: 5

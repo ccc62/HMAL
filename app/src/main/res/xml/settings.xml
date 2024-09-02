@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/settings_language">
+        <rikka.preference.SimpleMenuPreference
+            android:defaultValue="SYSTEM"
+            android:icon="@drawable/outline_language_24"
+            android:key="language"
+            android:summary="%s"
+            android:title="@string/settings_language" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_theme">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:disableDependentsState="true"
+            android:icon="@drawable/outline_palette_24"
+            android:key="followSystemAccent"
+            android:title="@string/settings_system_theme_color" />
+        <rikka.preference.SimpleMenuPreference
+            android:defaultValue="MATERIAL_BLUE"
+            android:dependency="followSystemAccent"
+            android:entries="@array/color_texts"
+            android:entryValues="@array/color_values"
+            android:icon="@drawable/outline_format_color_fill_24"
+            android:key="themeColor"
+            android:summary="%s"
+            android:title="@string/settings_theme_color" />
+        <rikka.preference.SimpleMenuPreference
+            android:defaultValue="-1"
+            android:entries="@array/theme_texts"
+            android:entryValues="@array/theme_values"
+            android:icon="@drawable/outline_dark_mode_24"
+            android:key="darkTheme"
+            android:summary="%s"
+            android:title="@string/dark_theme" />
+        <SwitchPreference
+            android:icon="@drawable/outline_invert_colors_24"
+            android:key="blackDarkTheme"
+            android:summary="@string/settings_pure_black_dark_theme_summary"
+            android:title="@string/settings_pure_black_dark_theme" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_module">
+        <Preference
+            android:icon="@drawable/outline_storage_24"
+            android:key="dataIsolation"
+            android:title="@string/settings_data_isolation"
+            app:fragment="icu.nullptr.hidemyapplist.ui.fragment.SettingsFragment$DataIsolationPreferenceFragment" />
+        <SwitchPreference
+            android:icon="@drawable/outline_hide_image_24"
+            android:key="hideIcon"
+            android:summary="@string/settings_hide_icon_summary"
+            android:title="@string/settings_hide_icon" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_service">
+        <Preference
+            android:icon="@drawable/outline_stop_circle_24"
+            android:key="stopSystemService"
+            android:summary="@string/settings_stop_system_service_summary"
+            android:title="@string/settings_stop_system_service" />
+        <Preference
+            android:icon="@drawable/outline_cleaning_services_24"
+            android:key="forceCleanEnv"
+            android:summary="@string/settings_force_clean_env_summary"
+            android:title="@string/settings_force_clean_env" />
+    </PreferenceCategory>
+</PreferenceScreen>
