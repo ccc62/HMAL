@@ -12,7 +12,7 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 ksp = { id = "com.google.devtools.ksp", version = "2.0.20-1.0.24" }
 nav-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "nav" }
 autoresconfig = { id = "dev.rikka.tools.autoresconfig", version = "1.2.2" }
-materialthemebuilder = { id = "dev.rikka.tools.materialthemebuilder", version = "1.4.1" }
+materialthemebuilder = { id = "dev.rikka.tools.materialthemebuilder", version = "1.5.1" }
 refine = { id = "dev.rikka.tools.refine", version = "4.4.0" }
 
 [libraries]
